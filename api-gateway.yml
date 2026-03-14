@@ -16,7 +16,6 @@ spring:
           uri: lb://MOVIE-SERVICE
           predicates:
             - Path=/movies/**
-
         - id: booking-service
           uri: lb://BOOKING-SERVICE
           predicates:
