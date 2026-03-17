@@ -13,7 +13,16 @@ spring:
     openfeign:
       circuitbreaker:
         enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
+rabbitmq:
+  exchange: booking-exchange
+  queue: booking-queue
+  routing-key: booking-routing-key
 management:
   endpoints:
     web:
