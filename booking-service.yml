@@ -19,10 +19,18 @@ spring:
     username: guest
     password: guest
 
-rabbitmq:
-  exchange: booking-exchange
-  queue: booking-queue
-  routing-key: booking-routing-key
+app:
+  rabbitmq:
+    exchange: booking-topic-exchange
+    routing-key: booking.created
+
+    queues:
+      movie: movie-booking-queue
+      notification: notification-queue
+
+    binding-keys:
+      movie: booking.*
+      notification: booking.created
 management:
   endpoints:
     web:
