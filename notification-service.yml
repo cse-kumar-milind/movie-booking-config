@@ -15,8 +15,11 @@ spring:
     username: guest
     password: guest
 
-rabbitmq:
-  queue: notification-queue         
+app:
+  rabbitmq:
+    exchange: booking-topic-exchange
+    queue: notification-queue
+    binding-key: booking.created        
 
 management:
   endpoints:
