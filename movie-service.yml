@@ -14,8 +14,11 @@ spring:
     username: guest
     password: guest
 
-rabbitmq:
-  queue: movie-booking-queue
+app:
+  rabbitmq:
+    exchange: booking-topic-exchange
+    queue: movie-booking-queue
+    binding-key: booking.*
 management:
   endpoints:
     web:
